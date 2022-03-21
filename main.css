@@ -21,7 +21,8 @@ facebook
 
 body{
   background: #002766;
-  font-family: sans-serif;
+  font-family: verdana, sans-serif;
+  font-size: 16px;
 }
 
 #content{
@@ -29,7 +30,7 @@ body{
   height: 100vh;
   position: relative;
   margin-left: 25px;
-  border-left: 25px solid #001b47;;
+  border-left: 35px solid #001b47;;
   border-top-left-radius: 80% 120%; /*80% 120% */
 }
 
@@ -55,5 +56,13 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+nav ul a {
+  display: block;
+  padding: 5px 35px;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: black;
 }
 
