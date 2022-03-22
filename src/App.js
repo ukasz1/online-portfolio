@@ -1,12 +1,13 @@
 import './main.css';
 import avatar from './images/avatar-photo.jpg';
+import { FaGithub, FaLinkedin, FaEnvelopeOpen } from "react-icons/fa";
 
 function App() {
   return (
     <main>
       <Avatar />
       <Navbar />
-      <Content />
+      <Container />
     </main>
   );
 }
@@ -31,8 +32,34 @@ const Navbar = () => {
   )
 }
 
+const Container = () => {
+  return (
+    <div className='container'>
+      <Socials />
+      <Content />
+    </div>
+
+  )
+}
+
+const Socials = () => {
+  return (
+    <div className='socials'>
+      <div className='socials-in'>
+        <FaGithub className='icon linkedin' />
+        <FaLinkedin className='icon' />
+        <FaEnvelopeOpen className='icon' />
+      </div>
+    </div>
+  )
+}
+
 const Content = () => {
-  return <></>
+  return (
+    <div className='content'>
+
+    </div>
+  )
 }
 
 
