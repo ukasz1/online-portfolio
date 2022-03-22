@@ -1,22 +1,7 @@
-/* 
-granatowy:
-  #002040
-
-niebieski
-  #002766
-
-jasny
-  #fafafa
-
-facebook
-  #f0f2f5
-*/
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body{
@@ -32,6 +17,7 @@ body{
 main{
   background: #f0f2f5;
   height: 100vh;
+  min-height: 720px;
   position: relative;
   margin-left: 25px;
   border-left: 35px solid #001b47;;
@@ -48,7 +34,7 @@ main{
   top: 0px;
 }
 
-.test{
+.avatar-frame{
   position: absolute;
   left: 65px; /* -465px */
   top: 28px; /* -450px */
@@ -73,43 +59,54 @@ nav ul a {
 .container{
   display: flex;
   height: 80vh;
+  min-height: 577px;
 }
 
 .socials{
   display: flex;
   position: relative;
-  width: 550px;
-
-  flex-direction: column;
-  align-items: flex-end;
-
+  width: 670px;
   /* border: 1px solid red; */
+  justify-content: center;
 }
 
-.socials-in{
-  width: 100%;
+.socials-inner{
+  /* width: 100%; */
   position: absolute;
   bottom: 0;
+  margin: 0 auto;
   /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
 }
 
 .content{
   /* border: 1px solid yellow; */
   width: 100%;
+  
 }
 
 .icon {
   font-size: 45px;
-  margin-top: 20px;
-  display: block;
-  
-  
-
+  transition: all 0.3s linear;
+  color: hsl(210, 22%, 49%);
+}
+.icon:hover{
+  cursor: pointer;
+  color:#001b47; /*#001931 #001b47 #002766*/
 }
 
-.linkedin{
-  
+.github-icon{
+  transform: scale(1.1);
+}
+
+.linkedin-icon{
+  margin-top: 37px;
+  margin-bottom: 32px;
+  transform: scale(1.1);
+}
+
+.email-icon{
+
 }
