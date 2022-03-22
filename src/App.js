@@ -14,7 +14,7 @@ function App() {
 
 const Avatar = () => {
   return (
-    <div className='test'>
+    <div className='avatar-frame'>
       <img src={avatar} alt="avatar" className="avatar" />
     </div>
   )
@@ -45,10 +45,10 @@ const Container = () => {
 const Socials = () => {
   return (
     <div className='socials'>
-      <div className='socials-in'>
-        <FaGithub className='icon linkedin' />
-        <FaLinkedin className='icon' />
-        <FaEnvelopeOpen className='icon' />
+      <div className='socials-inner'>
+        <FaGithub className='icon github-icon' />
+        <FaLinkedin className='icon linkedin-icon' />
+        <FaEnvelopeOpen className='icon email-icon' />
       </div>
     </div>
   )
