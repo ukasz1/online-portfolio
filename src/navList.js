@@ -1,15 +1,15 @@
 const navList = [
   {
     id: 1,
-    text: 'O mnie'
+    text: 'About me'
   },
   {
     id: 2,
-    text: 'Projekty'
+    text: 'Projects'
   },
   {
     id: 3,
-    text: 'Osiągnięcia'
+    text: 'Achievements'
   }
 ];
 
