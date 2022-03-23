@@ -1,6 +1,6 @@
 import './main.css';
 import avatar from './images/avatar-photo.jpg';
-import { FaGithub, FaLinkedin, FaEnvelopeOpen } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelopeOpen, FaBars } from "react-icons/fa";
 
 function App() {
   return (
@@ -46,9 +46,9 @@ const Socials = () => {
   return (
     <div className='socials'>
       <div className='socials-inner'>
-        <FaGithub className='icon github-icon' />
-        <FaLinkedin className='icon linkedin-icon' />
-        <FaEnvelopeOpen className='icon email-icon' />
+        <a href="https://github.com/ukasz1"><FaGithub className='icon github-icon' /></a>
+        <a href="https://www.linkedin.com/in/%C5%82ukasz-mitkowski-058883177"><FaLinkedin className='icon linkedin-icon' /></a>
+        <a href="mailto:lukaszmitkowski53@gmail.com"><FaEnvelopeOpen className='icon email-icon' /></a>
       </div>
     </div>
   )
