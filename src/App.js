@@ -8,11 +8,18 @@ import avatar from './images/avatar-photo.jpg';
 import { FaGithub, FaLinkedin, FaEnvelopeOpen, FaBars } from "react-icons/fa";
 
 function App() {
+  const [actualTab, setActualTab] = useState(0);
+
+  const checkTab = (e) => {
+    e.preventDefault();
+    let gainedTabNumber = Number(e.target.id[1]);
+    setActualTab(gainedTabNumber);
+  }
   return (
     <main>
       <Avatar />
-      <Navbar />
-      <Container />
+      <Navbar checkTab={checkTab} />
+      <Container actualTab={actualTab} />
     </main>
   );
 }
@@ -25,31 +32,24 @@ const Avatar = () => {
   )
 }
 
-const Navbar = () => {
+const Navbar = ({ checkTab }) => {
   return (
     <nav>
       <ul>
-        {navList.map(link => {
+        {navList.map((link, index) => {
           const { id, text } = link;
-          return <li key={id}><button type="button" className="menu-btn">{text}</button></li>
-        })
-
-        }
-
-
-        {/* <li><a href="#">O mnie</a></li>
-        <li><a href="#">Projekty</a></li>
-        <li><a href="#">Osiągnięcia</a></li> */}
+          return <li key={id}><button type="button" className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</button></li>
+        })}
       </ul>
     </nav>
   )
 }
 
-const Container = () => {
+const Container = ({ actualTab }) => {
   return (
     <div className='container'>
       <Socials />
-      <Content />
+      <Content actualTab={actualTab} />
     </div>
 
   )
@@ -67,9 +67,8 @@ const Socials = () => {
   )
 }
 
-const Content = () => {
+const Content = ({ actualTab }) => {
   const tabs = [<AboutMe />, <Projects />, <Achievements />];
-  const [actualTab, setActualTab] = useState(0);
   return (
     <div className='content'>
       {tabs[actualTab]}
