@@ -6,8 +6,9 @@
 
 body{
   background: #002766;
-  font-family: verdana, sans-serif;
+  font-family: 'Montserrat', 'Arial', sans-serif; 
   font-size: 16px;
+  line-height: 1.5;
 }
 
 /* div {
@@ -17,12 +18,21 @@ body{
 main{
   background: #f0f2f5;
   height: 100vh;
-  min-height: 720px;
+  min-height: 690px;
   position: relative;
   margin-left: 25px;
   border-left: 35px solid #001b47;;
   border-top-left-radius: 80% 120%; /*80% 120% */
   /* min-width: 1500px; */
+}
+
+h1{
+  font-size: 4.5em;
+  font-weight: normal;
+}
+
+article{
+  padding: 30px;
 }
 
 .avatar{
@@ -61,6 +71,7 @@ nav ul a {
   display: flex;
   height: 80vh;
   min-height: 577px;
+  justify-content: space-between;
 }
 
 .socials{
@@ -85,8 +96,10 @@ nav ul a {
 
 .content{
   /* border: 1px solid brown; */
-  width: 100%;
-  
+  width: 70%; 
+  padding: 40px;
+  padding-top: 60px;
+  color: #444444;
 }
 
 .icon {
@@ -109,6 +122,20 @@ nav ul a {
   transform: scale(1.1);
 }
 
-.email-icon{
+/* .email-icon{
 
+} */
+
+.menu-btn{
+  background: transparent;
+  border-color: transparent;
+  margin-right: 60px;
+  font-family: 'Verdana';
+  font-size: 1.4rem;
+  color: #001931;
+  letter-spacing: -1px;
+}
+
+.menu-btn:hover{
+  cursor: pointer;
 }
