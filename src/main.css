@@ -162,8 +162,6 @@ td:last-child{
   padding-right: 0;
 }
 
-
-
 td a {
   text-decoration: none;
   font-weight: bold;
@@ -171,5 +169,19 @@ td a {
 }
 td a:hover{
   color: red;
+}
+
+.project-container{
+  padding: 30px;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 22px;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+.card-picture{
+  height: 200px;
+  /* transform: scale(0.5); */
 }
 

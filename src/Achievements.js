@@ -5,7 +5,7 @@ const Achievements = () => {
   return (
     <div className="projects">
       <h1>My Certificates</h1>
-      <div className='certificates-container'>
+      <section className='certificates-container'>
         <table>
           <tbody>
             {certificates.map(item => {
@@ -22,7 +22,7 @@ const Achievements = () => {
           </tbody>
 
         </table>
-      </div>
+      </section>
     </div>
   )
 }
