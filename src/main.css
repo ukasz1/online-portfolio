@@ -23,12 +23,14 @@ main{
   margin-left: 25px;
   border-left: 35px solid #001b47;;
   border-top-left-radius: 80% 120%; /*80% 120% */
+  box-shadow: inset  3px 3px 8px #888888;
   /* min-width: 1500px; */
 }
 
 h1{
   font-size: 4.5em;
   font-weight: normal;
+  text-shadow: 1px 1px 1px #b9b9b9;
 }
 
 .about-article{
@@ -192,7 +194,8 @@ td a:hover{
 
 .projects-item img:hover{
   cursor: pointer;
-  transform: scale(1.15);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px 2px #999999;
 }
 
 
