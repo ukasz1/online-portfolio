@@ -180,8 +180,19 @@ td a:hover{
   justify-content: center;
 }
 
-.card-picture{
+.projects-item{
   height: 200px;
-  /* transform: scale(0.5); */
 }
+
+.card-picture{
+  display: block;
+  height: 100%;
+  transition: transform 0.15s;
+}
+
+.projects-item img:hover{
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
 

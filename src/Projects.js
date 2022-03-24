@@ -10,12 +10,38 @@ const Projects = () => {
     <div className="projects">
       <h1>Projects</h1>
       <section className="project-container">
-        <img src={card1} alt="card1" className='card-picture' />
-        <img src={card2} alt="card2" className='card-picture' />
-        <img src={card3} alt="card3" className='card-picture' />
-        <img src={card4} alt="card4" className='card-picture' />
-        <img src={card5} alt="card5" className='card-picture' />
-        <img src={card6} alt="card6" className='card-picture' />
+
+        <article className="projects-item">
+          <img src={card1} alt="card1" className='card-picture' />
+        </article>
+
+        <article className='projects-item'>
+          <img src={card2} alt="card2" className='card-picture' />
+        </article>
+
+        <article className='projects-item'>
+          <img src={card3} alt="card3" className='card-picture' />
+        </article>
+
+        <article className='projects-item'>
+          <img src={card4} alt="card4" className='card-picture' />
+        </article>
+
+        <article className='projects-item'>
+          <img src={card5} alt="card5" className='card-picture' />
+        </article>
+
+
+        <article className='projects-item'>
+          <img src={card6} alt="card6" className='card-picture' />
+        </article>
+
+
+
+
+
+
+
       </section>
     </div>
   )
