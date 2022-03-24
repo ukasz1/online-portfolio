@@ -31,7 +31,7 @@ h1{
   font-weight: normal;
 }
 
-article{
+.about-article{
   padding: 30px;
 }
 
@@ -57,18 +57,9 @@ ul{
 
 nav ul {
   padding: 20px;
-  /* list-style-type: none; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-}
-
-nav ul a {
-  display: block;
-  padding: 5px 35px;
-  font-size: 1.3em;
-  text-decoration: none;
-  color: black;
 }
 
 .container{
@@ -147,3 +138,38 @@ nav ul a {
 .menu-btn:hover{
   cursor: pointer;
 }
+
+.certificates-container{
+  padding-top: 30px;
+  padding-left: 30px;
+}
+/* .certificate-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
+} */
+
+table{
+  /* border: 1px solid red; */
+}
+
+td{
+  padding-right: 75px;
+  line-height: 35px;
+}
+td:last-child{
+  padding-right: 0;
+}
+
+
+
+td a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #002766;
+}
+td a:hover{
+  color: red;
+}
+

@@ -36,11 +36,11 @@ const certificates = [
   },
   {
     id: 5,
-    name: 'Podstawy marketingu internetowego - Google Internetowe Rewolucje',
+    name: 'Podstawy marketingu internetowego',
     issuedBy: 'Google',
     icon: <FaGoogle />,
     link: 'https://learndigital.withgoogle.com/internetowerewolucje/validate-certificate-code',
-    number: 'ZVG D74 DGC',
+    number: 'nr ZVGD74DGC',
   },
   {
     id: 6,
@@ -50,7 +50,22 @@ const certificates = [
     link: 'https://www.testportal.pl/DownloadCertificate.html?a=KdUXFY2ekj4%2FoD%2Bh5rcFmQ%3D%3D&t=ddtBJmvrfVR9',
     number: null
   },
-
+  {
+    id: 7,
+    name: 'LCCI English B2',
+    issuedBy: 'LCCI International Qualifications',
+    icon: null,
+    link: null,
+    number: null
+  },
+  {
+    id: 8,
+    name: 'Pearson Test of English B2',
+    issuedBy: 'Pearson Education Ltd.',
+    icon: null,
+    link: null,
+    number: null
+  },
 ];
 
 export default certificates;
