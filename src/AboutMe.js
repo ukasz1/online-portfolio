@@ -1,7 +1,10 @@
 const AboutMe = () => {
   return (
     <>
-      <h1>About me</h1>
+      <div className="title">
+        <h1>About me</h1>
+        <div className="underline underline-about"></div>
+      </div>
       <article className="about-article">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat efficitur felis nec vestibulum. Nam non metus luctus, vehicula quam quis, consectetur elit. Curabitur nec leo nec mauris pretium vestibulum. Sed quis ex in sapien laoreet sodales ut id turpis. Nam purus nisi, semper et pellentesque ut, fermentum nec lacus. Nam tempor, dui vulputate placerat vulputate, velit sapien porttitor lectus, sed cursus ipsum nisi sed risus.
         </p><br />

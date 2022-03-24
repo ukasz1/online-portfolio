@@ -8,7 +8,10 @@ import card6 from './images/card6.jpg';
 const Projects = () => {
   return (
     <div className="projects">
-      <h1>Projects</h1>
+      <div className='title'>
+        <h1>Projects</h1>
+        <div className='underline underline-projects'></div>
+      </div>
       <section className="project-container">
 
         <article className="projects-item">
