@@ -18,14 +18,53 @@ body{
 main{
   background: #f0f2f5;
   height: 100vh;
-  min-height: 690px;
+  min-height: 690px; /*690px*/
   position: relative;
   margin-left: 25px;
-  border-left: 35px solid #001b47;;
+  border-left: 35px solid #001b47;
   border-top-left-radius: 80% 120%; /*80% 120% */
   box-shadow: inset  3px 3px 8px #888888;
-  /* min-width: 1500px; */
 }
+
+.container{
+  display: flex;
+  height: 90vh; /*90vh*/
+  min-height: 620px; /*577px*/
+  justify-content: space-between;
+  /* border: solid 1px green; */
+}
+
+.content{
+  position: relative;
+  width: 70%; 
+  padding: 40px;
+  padding-top: 60px;
+  color: #444444;
+  overflow: hidden;
+  /* border: 1px solid brown; */
+}
+
+.socials{
+  display: flex;
+  position: relative;
+  width: 24%; /*460px*/
+  min-width: 380px;
+  /* border: 1px solid red; */
+  justify-content: center;
+}
+
+.socials-inner{
+  /* width: 100%; */
+  position: absolute;
+  top: 60%;
+  margin: 0 auto;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
 
 .title {
   position: relative;
@@ -94,42 +133,6 @@ nav ul {
   justify-content: flex-end;
 }
 
-.container{
-  display: flex;
-  height: 90vh;
-  min-height: 577px; /*577px*/
-  justify-content: space-between;
-}
-
-.socials{
-  display: flex;
-  position: relative;
-  width: 24%; /*460px*/
-  min-width: 380px;
-  /* border: 1px solid red; */
-  justify-content: center;
-}
-
-.socials-inner{
-  /* width: 100%; */
-  position: absolute;
-  top: 53vh;
-  margin: 0 auto;
-  /* border: 1px solid green; */
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.content{
-  position: relative;
-  width: 70%; 
-  padding: 40px;
-  padding-top: 60px;
-  color: #444444;
-  overflow: hidden;
-}
-
 .icon {
   font-size: 45px;
   transition: all 0.3s linear;
@@ -176,16 +179,6 @@ nav ul {
   padding-top: 30px;
   padding-left: 30px;
 }
-/* .certificate-item{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: baseline;
-} */
-
-table{
-  /* border: 1px solid red; */
-}
 
 td{
   padding-right: 75px;
@@ -214,7 +207,7 @@ td a:hover{
 }
 
 .projects-item{
-  height: 200px;
+  height: 28vh;
 }
 
 .card-picture{
@@ -230,13 +223,16 @@ td a:hover{
 }
 
 .about, .projects, .achievements {
-  /* transform: translateX(60%); */
-  /* opacity: 0; */
-   display: none;
+  transform: translateX(70%);
+  opacity: 0;
   position: absolute;
+  transition: all 0.2s linear;
+  z-index: -1;
 }
 
 .active-tab{
-  /* opacity: 1; */
-  display: block;
+  /* position: relative; */
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
 }

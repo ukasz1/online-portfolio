@@ -16,11 +16,13 @@ function App() {
     setActualTab(gainedTabNumber);
   }
   return (
-    <main>
-      <Avatar />
-      <Navbar checkTab={checkTab} />
-      <Container actualTab={actualTab} />
-    </main>
+    <>
+      <main>
+        <Avatar />
+        <Navbar checkTab={checkTab} />
+        <Container actualTab={actualTab} />
+      </main>
+    </>
   );
 }
 
