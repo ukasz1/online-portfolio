@@ -11,7 +11,6 @@ function App() {
   const [actualTab, setActualTab] = useState(0);
 
   const checkTab = (e) => {
-    e.preventDefault();
     let gainedTabNumber = Number(e.target.id[1]);
     setActualTab(gainedTabNumber);
   }
@@ -40,7 +39,7 @@ const Navbar = ({ checkTab }) => {
       <ul>
         {navList.map((link, index) => {
           const { id, text } = link;
-          return <li key={id}><button type="button" className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</button></li>
+          return <li key={id}><a href className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
         })}
       </ul>
     </nav>

@@ -127,7 +127,7 @@ ul{
 }
 
 nav ul {
-  padding: 20px;
+  padding: 18px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -162,9 +162,11 @@ nav ul {
 }
 
 .menu-btn{
-  background: transparent;
+  display: block;
+  /* background: transparent; */
   border-color: transparent;
-  margin-right: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-family: 'Verdana';
   font-size: 1.4rem;
   color: #001931;
