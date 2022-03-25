@@ -15,9 +15,10 @@ const Achievements = ({ actualTab }) => {
               const { id, name, icon, issuedBy, link, number } = item;
               return (
                 <tr key={id} className='certificate-item'>
-                  <td><a href={link}>{name}</a></td>
+                  <td><a href={link}>{name}</a>
+                    {number ? <small> ({number})</small> : null}
+                  </td>
                   <td>{issuedBy} {icon}</td>
-                  <td>{number}</td>
                 </tr>
               )
             })}

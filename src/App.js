@@ -9,6 +9,8 @@ import { FaGithub, FaLinkedin, FaEnvelopeOpen, FaBars } from "react-icons/fa";
 
 function App() {
   const [actualTab, setActualTab] = useState(0);
+  const [showNavList, setShowNavList] = useState(true);
+
 
   const checkTab = (e) => {
     let gainedTabNumber = Number(e.target.id[1]);
@@ -18,7 +20,7 @@ function App() {
     <>
       <main>
         <Avatar />
-        <Navbar checkTab={checkTab} />
+        <Navbar checkTab={checkTab} showNavList={showNavList} />
         <Container actualTab={actualTab} />
       </main>
     </>
@@ -33,18 +35,45 @@ const Avatar = () => {
   )
 }
 
-const Navbar = ({ checkTab }) => {
+const Navbar = ({ checkTab, showNavList }) => {
   return (
     <nav>
       <ul>
         {navList.map((link, index) => {
           const { id, text } = link;
-          return <li key={id}><a href className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
+          return <li key={id}><a className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
         })}
+        <button className='nav-toggle'>
+          <FaBars className='fa-bars' />
+        </button>
+      </ul>
+
+    </nav>
+  )
+
+}
+
+/*
+const Navbar = ({ checkTab, showNavList }) => {
+  return (
+    <nav>
+      <ul>
+        {showNavList ? (
+          navList.map((link, index) => {
+            const { id, text } = link;
+            return <li key={id}><a className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
+          })
+        ) : (
+          <button className='nav-toggle'>
+            <FaBars className='fa-bars' />
+          </button>
+        )}
       </ul>
     </nav>
   )
+
 }
+*/
 
 const Container = ({ actualTab }) => {
   return (
