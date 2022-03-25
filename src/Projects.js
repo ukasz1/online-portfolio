@@ -5,9 +5,9 @@ import card4 from './images/card4.jpg';
 import card5 from './images/card5.jpg';
 import card6 from './images/card6.jpg';
 
-const Projects = () => {
+const Projects = ({ actualTab }) => {
   return (
-    <div className="projects">
+    <div className={`projects ${(actualTab === 1) ? 'active-tab' : null}`}>
       <div className='title'>
         <h1>Projects</h1>
         <div className='underline underline-projects'></div>

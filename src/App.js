@@ -69,9 +69,13 @@ const Socials = () => {
 
 const Content = ({ actualTab }) => {
   const tabs = [<AboutMe />, <Projects />, <Achievements />];
+  console.log(actualTab);
   return (
     <div className='content'>
-      {tabs[actualTab]}
+      {/* {tabs[actualTab]} */}
+      <AboutMe actualTab={actualTab} />
+      <Projects actualTab={actualTab} />
+      <Achievements actualTab={actualTab} />
     </div>
   )
 }

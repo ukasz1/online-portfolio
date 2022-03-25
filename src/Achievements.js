@@ -1,9 +1,9 @@
 import certificates from './certificates';
 import { FaAngleDoubleRight } from 'react-icons/fa'
 
-const Achievements = () => {
+const Achievements = ({ actualTab }) => {
   return (
-    <div className="projects">
+    <div className={`achievements ${(actualTab === 2) ? 'active-tab' : null}`}>
       <div className='title'>
         <h1>My Certificates</h1>
         <div className='underline underline-cert'></div>
