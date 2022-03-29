@@ -1,5 +1,5 @@
 import './main.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import navList from './navList';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
@@ -10,18 +10,54 @@ import { FaGithub, FaLinkedin, FaEnvelopeOpen, FaBars } from "react-icons/fa";
 function App() {
   const [actualTab, setActualTab] = useState(0);
   const [showNavList, setShowNavList] = useState(true);
-
+  const [mainWidth, setMainWidth] = useState(window.innerWidth);
+  const [mainHeight, setMainHeight] = useState(window.innerHeight);
 
   const checkTab = (e) => {
     let gainedTabNumber = Number(e.target.id[1]);
     setActualTab(gainedTabNumber);
   }
+
+  //** To avoid hardcoding the height for RWD  **/
+  useEffect(() => {
+    checkDocumentHeight();
+    window.addEventListener('resize', checkDocumentHeight);
+    return () => {
+      window.removeEventListener('resize', checkDocumentHeight)
+    }
+  }, [])
+
+  const checkDocumentHeight = () => {
+    setMainWidth(window.innerWidth);
+    setMainHeight(window.innerHeight);
+
+    const navHeight = 70;
+    const contentPaddingTop = 60;
+
+    const title = document.getElementsByTagName('h1')[actualTab];
+    const titleHeight = title.getBoundingClientRect().height;
+
+    if (actualTab === 2) {
+      const table = document.getElementsByTagName('table')[0];
+      const tableHeight = table.getBoundingClientRect().height;
+
+      const sectionPaddingTop = 30;
+      const tmp = navHeight + contentPaddingTop + titleHeight + sectionPaddingTop + tableHeight;
+      setMainHeight(tmp);
+    }
+    else
+      setMainHeight(800);
+
+  }
+
   return (
-    <main>
+    <div className="main" style={mainWidth >= 1050 ? null : { height: mainHeight }}>
       <Avatar />
       <Navbar checkTab={checkTab} showNavList={showNavList} />
       <Container actualTab={actualTab} />
-    </main>
+      {/* Szerokość dokumentu: {mainWidth} PX <br />
+      Wysokość dokumentu: {mainHeight} PX */}
+    </div>
   );
 }
 
