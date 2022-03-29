@@ -48,30 +48,7 @@ const Navbar = ({ checkTab, showNavList }) => {
 
     </nav>
   )
-
 }
-
-/*
-const Navbar = ({ checkTab, showNavList }) => {
-  return (
-    <nav>
-      <ul>
-        {showNavList ? (
-          navList.map((link, index) => {
-            const { id, text } = link;
-            return <li key={id}><a className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
-          })
-        ) : (
-          <button className='nav-toggle'>
-            <FaBars className='fa-bars' />
-          </button>
-        )}
-      </ul>
-    </nav>
-  )
-
-}
-*/
 
 const Container = ({ actualTab }) => {
   return (
