@@ -261,7 +261,9 @@ td a:hover{
 @media screen and (max-width: 1050px){
   main{
     border-top-left-radius: 0;
-    height: inherit;
+    box-shadow: none;
+    border: 1px solid green;
+    /* height: 1100px; */
     
   }
 
@@ -280,13 +282,13 @@ td a:hover{
   .socials{
     display: none;
   }
+
   .content{
     width: 98%;
     overflow: visible;
+    
   }
-  .container{
-    height: 750px;
-  }
+  
 
   .about, .projects, .achievements{
     display: none;
@@ -294,6 +296,4 @@ td a:hover{
   .active-tab{
     display: block;
   }
-
-
 }
