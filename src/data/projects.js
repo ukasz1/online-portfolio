@@ -12,27 +12,27 @@ const projects = [
     desciption: ''
   },
   {
-    id: 1,
+    id: 2,
     src: card2,
     desciption: ''
   },
   {
-    id: 2,
+    id: 3,
     src: card3,
     desciption: ''
   },
   {
-    id: 3,
+    id: 4,
     src: card4,
     desciption: ''
   },
   {
-    id: 4,
+    id: 5,
     src: card5,
     desciption: ''
   },
   {
-    id: 5,
+    id: 6,
     src: card6,
     desciption: ''
   }
