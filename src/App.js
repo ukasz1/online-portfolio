@@ -119,9 +119,9 @@ const Socials = () => {
   return (
     <div className='socials'>
       <div className='socials-inner'>
-        <a href="https://github.com/ukasz1"><FaGithub className='icon github-icon' /></a>
-        <a href="https://www.linkedin.com/in/%C5%82ukasz-mitkowski-058883177"><FaLinkedin className='icon linkedin-icon' /></a>
-        <a href="mailto:lukaszmitkowski53@gmail.com"><FaEnvelopeOpen className='icon email-icon' /></a>
+        <a href="https://github.com/ukasz1" target="_blank"><FaGithub className='icon github-icon' /></a>
+        <a href="https://www.linkedin.com/in/%C5%82ukasz-mitkowski-058883177" target="_blank"><FaLinkedin className='icon linkedin-icon' /></a>
+        <a href="mailto:lukaszmitkowski53@gmail.com" target="_blank"><FaEnvelopeOpen className='icon email-icon' /></a>
       </div>
     </div>
   )
