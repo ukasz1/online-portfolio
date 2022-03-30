@@ -58,7 +58,6 @@ function App() {
     </div>
   );
 }
-
 const Avatar = () => {
   return (
     <div className='avatar-frame'>
@@ -76,7 +75,6 @@ const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
           return <li key={id}><a className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
         })}
       </ul>
-
       <div className='nav'>
         <div className='upper-nav'>
           <div className='little-avatar-div'>
@@ -88,9 +86,7 @@ const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
               <FaBars className='fa-bars' />
             </button>
           </div>
-
         </div>
-
         <div className={`links-container ${showNavList && 'show-links-container'}`}>
           <ul className='links'>
             {navList.map((link, index) => {
@@ -99,7 +95,6 @@ const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
             })}
           </ul>
         </div>
-
       </div>
     </nav >
   )
@@ -139,6 +134,5 @@ const Content = ({ actualTab }) => {
     </div>
   )
 }
-
 
 export default App;
