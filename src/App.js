@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="main" style={mainWidth >= 1050 ? null : { height: mainHeight }}>
       <Avatar />
-      <Navbar checkTab={checkTab} showNavList={showNavList} />
+      <Navbar checkTab={checkTab} showNavList={showNavList} setShowNavList={setShowNavList} />
       <Container actualTab={actualTab} />
     </div>
   );
@@ -67,7 +67,7 @@ const Avatar = () => {
   )
 }
 
-const Navbar = ({ checkTab, showNavList }) => {
+const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
   return (
     <nav>
       <ul className='basic-list'>
@@ -79,26 +79,29 @@ const Navbar = ({ checkTab, showNavList }) => {
 
       <div className='nav'>
         <div className='upper-nav'>
-          <div className='little-avatar-div'><span className='name-span'>ŁUKASZ MITKOWSKI PORTFOLIO</span><img src={avatar} alt="logo" className='small-avatar' /></div>
+          <div className='little-avatar-div'>
+            <span className='nav-span'>ŁUKASZ MITKOWSKI'S PORTFOLIO</span>
+            <img src={avatar} alt="logo" className='small-avatar' />
+          </div>
           <div className='nav-button'>
-            <button className='nav-toggle'>
+            <button className='nav-toggle' onClick={() => setShowNavList(!showNavList)}>
               <FaBars className='fa-bars' />
             </button>
           </div>
 
         </div>
 
-        <div className='links-container'>
+        <div className={`links-container ${showNavList && 'show-links-container'}`}>
           <ul className='links'>
             {navList.map((link, index) => {
               const { id, text } = link;
-              return <li key={id}><a className="links-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
+              return <li key={id}><a className="links-btn" id={'_' + index} onClick={(e) => { checkTab(e); setShowNavList(!showNavList) }}>{text}</a></li>
             })}
           </ul>
         </div>
 
       </div>
-    </nav>
+    </nav >
   )
 }
 

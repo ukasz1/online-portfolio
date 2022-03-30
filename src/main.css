@@ -293,24 +293,23 @@ td a:hover{
     display: none;
   }
 
-  nav{
-    
-  }
-
   .basic-list{
     display: none;
   }
 
   .small-avatar{
-    height: 58px;
+    height: 35px;
     /* margin-left: 20px; */
     border-color: #001931;
-  border-width: 5px;
-  border-style: solid;
-  border-radius: 50%;
-display: table-cell;
-    vertical-align: middle;
-    display: none;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 50%;
+    margin-left: 13px;
+    margin-top: 8px;
+    
+    
+    /* display: none; */
+    
   }
 
   .nav{
@@ -321,10 +320,12 @@ display: table-cell;
     /* height: 100%; */
     /* display: flex; */
     /* flex-direction: row; */
+    /* border-bottom: 1px solid #030031; */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     /* border-bottom: 1px dotted grey; */
     z-index: 2;
     background: #f7f9fc;
+    /* background: #cfcfcf; */
     
     opacity: 1;
     
@@ -341,21 +342,37 @@ display: table-cell;
   
   .little-avatar-div{
     display: table;
+    /* border: 1px solid green; */
   }
 
-  .name-span{
+  .nav-span{
     display: table-cell;
     vertical-align: middle;
     padding: 15px;
+    padding-right: 0;
+    color: #050044;
     font-weight: bold;
   }
 
-  .nav-button{
-    
+  .links-container{
+    display: none;
   }
 
-  .links-container{
-    /* display: none; */
+  .show-links-container{
+    display: block;
+  }
+
+  .links a{
+    display: block;
+    font-weight: 500;
+    color: #050044;
+    padding: 0.5rem 1rem;
+  }
+
+  .links a:hover{
+    background:#002766;
+    color: #f0f2f5;
+    cursor: pointer;
   }
 
   .nav-toggle{
