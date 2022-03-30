@@ -8,8 +8,8 @@ import avatar from './images/avatar-photo.jpg';
 import { FaGithub, FaLinkedin, FaEnvelopeOpen, FaBars } from "react-icons/fa";
 
 function App() {
-  const [actualTab, setActualTab] = useState(0);
-  const [showNavList, setShowNavList] = useState(true);
+  const [actualTab, setActualTab] = useState(2);
+  const [showNavList, setShowNavList] = useState(false);
   const [mainWidth, setMainWidth] = useState(window.innerWidth);
   const [mainHeight, setMainHeight] = useState(window.innerHeight);
 
@@ -18,14 +18,14 @@ function App() {
     setActualTab(gainedTabNumber);
   }
 
-  //** To avoid hardcoding the height for RWD  **/
+  //** To improve RWD and avoid hardcoding the content height **/
   useEffect(() => {
     checkDocumentHeight();
     window.addEventListener('resize', checkDocumentHeight);
     return () => {
       window.removeEventListener('resize', checkDocumentHeight)
     }
-  }, [])
+  }, [actualTab])
 
   const checkDocumentHeight = () => {
     setMainWidth(window.innerWidth);
@@ -42,21 +42,19 @@ function App() {
       const tableHeight = table.getBoundingClientRect().height;
 
       const sectionPaddingTop = 30;
-      const tmp = navHeight + contentPaddingTop + titleHeight + sectionPaddingTop + tableHeight;
-      setMainHeight(tmp);
+      const newMainHeight = navHeight + contentPaddingTop + titleHeight + sectionPaddingTop + tableHeight;
+      setMainHeight(newMainHeight);
     }
     else
       setMainHeight(800);
-
   }
+  // ----------------------------------
 
   return (
     <div className="main" style={mainWidth >= 1050 ? null : { height: mainHeight }}>
       <Avatar />
       <Navbar checkTab={checkTab} showNavList={showNavList} />
       <Container actualTab={actualTab} />
-      {/* Szerokość dokumentu: {mainWidth} PX <br />
-      Wysokość dokumentu: {mainHeight} PX */}
     </div>
   );
 }
@@ -72,16 +70,34 @@ const Avatar = () => {
 const Navbar = ({ checkTab, showNavList }) => {
   return (
     <nav>
-      <ul>
+      <ul className='basic-list'>
         {navList.map((link, index) => {
           const { id, text } = link;
           return <li key={id}><a className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
         })}
-        <button className='nav-toggle'>
-          <FaBars className='fa-bars' />
-        </button>
       </ul>
 
+      <div className='nav'>
+        <div className='upper-nav'>
+          <div className='little-avatar-div'><span className='name-span'>ŁUKASZ MITKOWSKI PORTFOLIO</span><img src={avatar} alt="logo" className='small-avatar' /></div>
+          <div className='nav-button'>
+            <button className='nav-toggle'>
+              <FaBars className='fa-bars' />
+            </button>
+          </div>
+
+        </div>
+
+        <div className='links-container'>
+          <ul className='links'>
+            {navList.map((link, index) => {
+              const { id, text } = link;
+              return <li key={id}><a className="links-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
+            })}
+          </ul>
+        </div>
+
+      </div>
     </nav>
   )
 }

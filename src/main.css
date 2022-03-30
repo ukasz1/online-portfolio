@@ -15,6 +15,10 @@ nav{
   height: 70px;
 }
 
+.nav{
+  display: none;
+}
+
 .nav-toggle{
   font-size: 1.5rem;
   background: transparent;
@@ -143,7 +147,7 @@ ul{
   list-style-type: none;
 }
 
-nav ul {
+nav > ul {
   padding: 18px;
   display: flex;
   flex-wrap: wrap;
@@ -151,8 +155,12 @@ nav ul {
 }
 
 .fa-bars{
-  color: #002766;
+  color: #001931;
   height:30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
 }
 
 .icon {
@@ -193,6 +201,10 @@ nav ul {
   font-size: 1.4rem;
   color: #001931;
   letter-spacing: -1px;
+}
+
+.navList-container{
+  display: none;
 }
 
 .menu-btn:hover{
@@ -277,22 +289,82 @@ td a:hover{
     padding-left: 13px;
   }
 
-  table{
-    
-  }
-
-  
-
-  .about-article{
-    
-  }
-
   .avatar-frame{
     display: none;
   }
 
+  nav{
+    
+  }
+
+  .basic-list{
+    display: none;
+  }
+
+  .small-avatar{
+    height: 58px;
+    /* margin-left: 20px; */
+    border-color: #001931;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 50%;
+display: table-cell;
+    vertical-align: middle;
+    display: none;
+  }
+
+  .nav{
+    position: relative;
+    display: block;
+    /* background: red; */
+    /* margin: 0 auto; */
+    /* height: 100%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* border-bottom: 1px dotted grey; */
+    z-index: 2;
+    background: #f7f9fc;
+    
+    opacity: 1;
+    
+    /* background: transparent; */
+    /* color: transparent; */
+  }
+
+  .upper-nav{
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .little-avatar-div{
+    display: table;
+  }
+
+  .name-span{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 15px;
+    font-weight: bold;
+  }
+
+  .nav-button{
+    
+  }
+
+  .links-container{
+    /* display: none; */
+  }
+
   .nav-toggle{
-    display: inline-block;
+    display: block; /*inline-block*/
+    position: relative;
+    height: 35px;
+    width: 40px;
+    opacity: 1;
+    /* border: 1px solid black; */
   }
 
   .menu-btn{
