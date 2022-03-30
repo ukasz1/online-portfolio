@@ -5,10 +5,11 @@ import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Achievements from './Achievements';
 import avatar from './images/avatar-photo.jpg';
-import { FaGithub, FaLinkedin, FaEnvelopeOpen, FaBars } from "react-icons/fa";
+import { socials } from './data/index';
+import { FaBars } from "react-icons/fa";
 
 function App() {
-  const [actualTab, setActualTab] = useState(2);
+  const [actualTab, setActualTab] = useState(0);
   const [showNavList, setShowNavList] = useState(false);
   const [mainWidth, setMainWidth] = useState(window.innerWidth);
   const [mainHeight, setMainHeight] = useState(window.innerHeight);
@@ -75,6 +76,7 @@ const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
           return <li key={id}><a className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
         })}
       </ul>
+
       <div className='nav'>
         <div className='upper-nav'>
           <div className='little-avatar-div'>
@@ -114,20 +116,18 @@ const Socials = () => {
   return (
     <div className='socials'>
       <div className='socials-inner'>
-        <a href="https://github.com/ukasz1" target="_blank"><FaGithub className='icon github-icon' /></a>
-        <a href="https://www.linkedin.com/in/%C5%82ukasz-mitkowski-058883177" target="_blank"><FaLinkedin className='icon linkedin-icon' /></a>
-        <a href="mailto:lukaszmitkowski53@gmail.com" target="_blank"><FaEnvelopeOpen className='icon email-icon' /></a>
+        {socials.map((item, index) => {
+          const { link, icon } = item;
+          return <a key={index} href={link} target="_blank">{icon}</a>
+        })}
       </div>
     </div>
   )
 }
 
 const Content = ({ actualTab }) => {
-  const tabs = [<AboutMe />, <Projects />, <Achievements />];
-  console.log(actualTab);
   return (
     <div className='content'>
-      {/* {tabs[actualTab]} */}
       <AboutMe actualTab={actualTab} />
       <Projects actualTab={actualTab} />
       <Achievements actualTab={actualTab} />
