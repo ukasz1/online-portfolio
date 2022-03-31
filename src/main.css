@@ -12,10 +12,10 @@ body{
 nav{
   height: 70px;
 }
-.nav{
-  display: none;
+.toggle-nav{
+  display: none; /*none*/
 }
-.nav-toggle{
+.toggle-button{
   font-size: 1.5rem;
   background: transparent;
   border-color: transparent;
@@ -23,7 +23,7 @@ nav{
   transition: all 0.3s linear;
   display: none;
 }
-.nav-toggle:hover {
+.toggle-button:hover {
   transform: rotate(90deg);
 }
 .main{
@@ -232,8 +232,8 @@ td a:hover{
   .avatar-frame{
     display: none;
   }
-  .basic-list{
-    display: none;
+  .basic-nav{
+    display: none; /*none*/
   }
   .small-avatar{
     height: 35px;
@@ -245,7 +245,7 @@ td a:hover{
     margin-top: 8px;
     
   }
-  .nav{
+  .toggle-nav{
     position: relative;
     display: block;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -258,6 +258,7 @@ td a:hover{
     height: 70px;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
   }
   .little-avatar-div{
     display: table;
@@ -276,18 +277,18 @@ td a:hover{
   .show-links-container{
     display: block;
   }
-  .links a{
+  .links span{
     display: block;
     font-weight: 500;
     color: #050044;
     padding: 0.5rem 1rem;
   }
-  .links a:hover{
+  .links span:hover{
     background:#002766;
     color: #f0f2f5;
     cursor: pointer;
   }
-  .nav-toggle{
+  .toggle-button{
     display: inline-block;
     position: relative;
     height: 35px;

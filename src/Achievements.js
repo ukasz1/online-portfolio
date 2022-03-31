@@ -9,6 +9,7 @@ const Achievements = ({ actualTab }) => {
         <div className='underline underline-cert'></div>
       </div>
       <section className='certificates-container'>
+
         <table>
           <tbody>
             {certificates.map(item => {
@@ -22,10 +23,9 @@ const Achievements = ({ actualTab }) => {
                 </tr>
               )
             })}
-
           </tbody>
-
         </table>
+
       </section>
     </div>
   )

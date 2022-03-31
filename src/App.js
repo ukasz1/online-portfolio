@@ -4,6 +4,7 @@ import navList from './navList';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Achievements from './Achievements';
+import { Avatar } from './Components/index';
 import avatar from './images/avatar-photo.jpg';
 import { socials } from './data/index';
 import { FaBars } from "react-icons/fa";
@@ -21,34 +22,34 @@ function App() {
 
   //** To improve RWD and avoid hardcoding the content height **/
   useEffect(() => {
+    const checkDocumentHeight = () => {
+      setMainWidth(window.innerWidth);
+      setMainHeight(window.innerHeight);
+
+      const navHeight = 70;
+      const contentPaddingTop = 60;
+
+      const title = document.getElementsByTagName('h1')[actualTab];
+      const titleHeight = title.getBoundingClientRect().height;
+
+      if (actualTab === 2) {
+        const table = document.getElementsByTagName('table')[0];
+        const tableHeight = table.getBoundingClientRect().height;
+
+        const sectionPaddingTop = 30;
+        const newMainHeight = navHeight + contentPaddingTop + titleHeight + sectionPaddingTop + tableHeight;
+        setMainHeight(newMainHeight);
+      }
+      else
+        setMainHeight(850);
+    }
+
     checkDocumentHeight();
     window.addEventListener('resize', checkDocumentHeight);
     return () => {
       window.removeEventListener('resize', checkDocumentHeight)
     }
   }, [actualTab])
-
-  const checkDocumentHeight = () => {
-    setMainWidth(window.innerWidth);
-    setMainHeight(window.innerHeight);
-
-    const navHeight = 70;
-    const contentPaddingTop = 60;
-
-    const title = document.getElementsByTagName('h1')[actualTab];
-    const titleHeight = title.getBoundingClientRect().height;
-
-    if (actualTab === 2) {
-      const table = document.getElementsByTagName('table')[0];
-      const tableHeight = table.getBoundingClientRect().height;
-
-      const sectionPaddingTop = 30;
-      const newMainHeight = navHeight + contentPaddingTop + titleHeight + sectionPaddingTop + tableHeight;
-      setMainHeight(newMainHeight);
-    }
-    else
-      setMainHeight(850);
-  }
   // ----------------------------------
 
   return (
@@ -59,48 +60,53 @@ function App() {
     </div>
   );
 }
-const Avatar = () => {
-  return (
-    <div className='avatar-frame'>
-      <img src={avatar} alt="avatar" className="avatar" />
-    </div>
-  )
-}
 
 const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
   return (
     <nav>
-      <ul className='basic-list'>
-        {navList.map((link, index) => {
-          const { id, text } = link;
-          return <li key={id}><a className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</a></li>
-        })}
-      </ul>
-
-      <div className='nav'>
-        <div className='upper-nav'>
-          <div className='little-avatar-div'>
-            <span className='nav-span'>ŁUKASZ MITKOWSKI'S PORTFOLIO</span>
-            <img src={avatar} alt="logo" className='small-avatar' />
-          </div>
-          <div className='nav-button'>
-            <button className='nav-toggle' onClick={() => setShowNavList(!showNavList)}>
-              <FaBars className='fa-bars' />
-            </button>
-          </div>
-        </div>
-        <div className={`links-container ${showNavList && 'show-links-container'}`}>
-          <ul className='links'>
-            {navList.map((link, index) => {
-              const { id, text } = link;
-              return <li key={id}><a className="links-btn" id={'_' + index} onClick={(e) => { checkTab(e); setShowNavList(!showNavList) }}>{text}</a></li>
-            })}
-          </ul>
-        </div>
-      </div>
+      <BasicNav checkTab={checkTab} />
+      <ToggleNav checkTab={checkTab} showNavList={showNavList} setShowNavList={setShowNavList} />
     </nav >
   )
 }
+const BasicNav = ({ checkTab }) => {
+  return (
+    <ul className='basic-nav'>
+      {navList.map((link, index) => {
+        const { id, text } = link;
+        return <li key={id}><span className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</span></li>
+      })}
+    </ul>
+  )
+}
+
+const ToggleNav = ({ checkTab, showNavList, setShowNavList }) => {
+  return (
+    <div className='toggle-nav'>
+      <div className='upper-nav'>
+        <div className='little-avatar-div'>
+          <span className='nav-span'>ŁUKASZ MITKOWSKI'S PORTFOLIO</span>
+          <img src={avatar} alt="logo" className='small-avatar' />
+        </div>
+        <div className='nav-button'>
+          <button className='toggle-button' onClick={() => setShowNavList(!showNavList)}>
+            <FaBars className='fa-bars' />
+          </button>
+        </div>
+      </div>
+
+      <div className={`links-container ${showNavList && 'show-links-container'}`}>
+        <ul className='links'>
+          {navList.map((link, index) => {
+            const { id, text } = link;
+            return <li key={id}><span className="links-btn" id={'_' + index} onClick={(e) => { checkTab(e); setShowNavList(!showNavList) }}>{text}</span></li>
+          })}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
 
 const Container = ({ actualTab }) => {
   return (
@@ -118,7 +124,7 @@ const Socials = () => {
       <div className='socials-inner'>
         {socials.map((item, index) => {
           const { link, icon } = item;
-          return <a key={index} href={link} target="_blank">{icon}</a>
+          return <a key={index} href={link} target="_blank" rel="noreferrer">{icon}</a>
         })}
       </div>
     </div>
