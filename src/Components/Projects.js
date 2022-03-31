@@ -9,10 +9,12 @@ const Projects = ({ actualTab }) => {
       </div>
       <section className="project-container">
         {projects.map(project => {
-          const { id, src, description } = project;
+          const { id, src, link /*, description*/ } = project;
           return (
             <article key={id} className="projects-item">
-              <img src={src} alt={`Project-${id}`} className='card-picture' />
+              <a href={link} target="_blank" rel="noreferrer">
+                <img src={src} alt={`Project-${id}`} className='card-picture' />
+              </a>
             </article>
           )
         })}
