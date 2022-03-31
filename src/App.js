@@ -47,7 +47,7 @@ function App() {
       setMainHeight(newMainHeight);
     }
     else
-      setMainHeight(800);
+      setMainHeight(850);
   }
   // ----------------------------------
 

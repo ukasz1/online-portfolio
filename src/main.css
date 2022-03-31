@@ -87,6 +87,7 @@ h1{
 }
 .underline-projects{
   left: 20px;
+  
 }
 .underline-cert{
   left: 20px;
@@ -187,7 +188,7 @@ td a:hover{
 .project-container{
   padding: 30px;
   display: grid;
-  column-gap: 50px;
+  column-gap: 50px; /*50px*/
   row-gap: 22px;
   grid-template-columns: auto auto auto;
   justify-content: center;
@@ -316,6 +317,10 @@ td a:hover{
   padding: 20px;
   column-gap: 30px;
   grid-template-columns: auto auto;
+  }
+
+  .projects-item{
+    height: 21vh;
   }
 }
 @media screen and (max-width: 600px){
