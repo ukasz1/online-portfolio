@@ -27,6 +27,7 @@ nav{
   transform: rotate(90deg);
 }
 main{
+  /* width: 100%; */
   background: #f0f2f5;
   height: 100vh;
   min-height: 690px; /*690px*/
@@ -223,6 +224,8 @@ td a:hover{
 
 @media screen and (max-width: 1050px){
   main{
+    margin-left:3%;
+    width: 97%;
     border-top-left-radius: 0;
     box-shadow: none;
     border-left: 35px solid #001b47;
@@ -315,7 +318,31 @@ td a:hover{
     display: block;
   }
 }
+/*---------------------------------------------------------------*/
+@media screen and (max-width: 992px){
+  main{
+    margin-left:3%;
+    width: 97%;
+    border-left: 35px solid #001b47;
+  }
+  h1{
+
+  }
+  
+}
+/*---------------------------------------------------------------*/
 @media screen and (max-width: 768px){
+  main{
+    margin-left:3%;
+    width: 97%;
+    border-left: 35px solid #001b47;
+  }
+  h1{
+
+  }
+
+
+
   .project-container{
   padding: 20px;
   column-gap: 30px;
@@ -326,8 +353,24 @@ td a:hover{
     height: 21vh;
   }
 }
-@media screen and (max-width: 600px){
+/*---------------------------------------------------------------*/
+@media screen and (max-width: 576px){
+  main{
+    margin-left:2%;
+    width: 98%;
+    border-left: 35px solid #001b47;
+  }
+  h1{
+    font-size: 2.5em;
+  }
+
+  .certificates-container{
+  padding: 0;
+}
   td{
+    line-height: 1.2;
+    /* border: 1px solid green; */
+    padding: 10px;
     border-bottom: #444444 1px dotted;
   }
 }
