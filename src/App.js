@@ -1,5 +1,5 @@
 import './main.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Avatar, Navbar, Container } from './Components/index';
 
 function App() {
@@ -46,11 +46,11 @@ function App() {
   // ----------------------------------
 
   return (
-    <div className="main" style={mainWidth >= 1050 ? null : { height: mainHeight }}>
+    <main style={mainWidth >= 1050 ? null : { height: mainHeight }}>
       <Avatar />
       <Navbar checkTab={checkTab} showNavList={showNavList} setShowNavList={setShowNavList} />
       <Container actualTab={actualTab} />
-    </div>
+    </main>
   );
 }
 

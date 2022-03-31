@@ -26,7 +26,7 @@ nav{
 .toggle-button:hover {
   transform: rotate(90deg);
 }
-.main{
+main{
   background: #f0f2f5;
   height: 100vh;
   min-height: 690px; /*690px*/
@@ -220,7 +220,7 @@ td a:hover{
 }
 
 @media screen and (max-width: 1050px){
-  .main{
+  main{
     border-top-left-radius: 0;
     box-shadow: none;
     border-left: 35px solid #001b47;
