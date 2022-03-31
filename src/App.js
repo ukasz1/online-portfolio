@@ -1,5 +1,5 @@
 import './main.css';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { Avatar, Navbar, Container } from './Components/index';
 
 function App() {
