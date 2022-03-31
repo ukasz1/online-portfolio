@@ -1,15 +1,6 @@
 import './main.css';
 import { useState, useEffect } from 'react';
-import AboutMe from './AboutMe';
-import Projects from './Projects';
-import Achievements from './Achievements';
-import { Avatar } from './Components/index';
-
-import { Navbar } from './Components/index'
-
-import avatar from './images/avatar-photo.jpg';
-import { socials } from './data/index';
-import { FaBars } from "react-icons/fa";
+import { Avatar, Navbar, Container } from './Components/index';
 
 function App() {
   const [actualTab, setActualTab] = useState(0);
@@ -61,86 +52,6 @@ function App() {
       <Container actualTab={actualTab} />
     </div>
   );
-}
-
-// const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
-//   return (
-//     <nav>
-//       <BasicNav checkTab={checkTab} />
-//       <ToggleNav checkTab={checkTab} showNavList={showNavList} setShowNavList={setShowNavList} />
-//     </nav >
-//   )
-// }
-// const BasicNav = ({ checkTab }) => {
-//   return (
-//     <ul className='basic-nav'>
-//       {navList.map((link, index) => {
-//         const { id, text } = link;
-//         return <li key={id}><span className="menu-btn" id={'_' + index} onClick={checkTab}>{text}</span></li>
-//       })}
-//     </ul>
-//   )
-// }
-
-// const ToggleNav = ({ checkTab, showNavList, setShowNavList }) => {
-//   return (
-//     <div className='toggle-nav'>
-//       <div className='upper-nav'>
-//         <div className='little-avatar-div'>
-//           <span className='nav-span'>ŁUKASZ MITKOWSKI'S PORTFOLIO</span>
-//           <img src={avatar} alt="logo" className='small-avatar' />
-//         </div>
-//         <div className='nav-button'>
-//           <button className='toggle-button' onClick={() => setShowNavList(!showNavList)}>
-//             <FaBars className='fa-bars' />
-//           </button>
-//         </div>
-//       </div>
-
-//       <div className={`links-container ${showNavList && 'show-links-container'}`}>
-//         <ul className='links'>
-//           {navList.map((link, index) => {
-//             const { id, text } = link;
-//             return <li key={id}><span className="links-btn" id={'_' + index} onClick={(e) => { checkTab(e); setShowNavList(!showNavList) }}>{text}</span></li>
-//           })}
-//         </ul>
-//       </div>
-//     </div>
-//   )
-//}
-
-
-const Container = ({ actualTab }) => {
-  return (
-    <div className='container'>
-      <Socials />
-      <Content actualTab={actualTab} />
-    </div>
-
-  )
-}
-
-const Socials = () => {
-  return (
-    <div className='socials'>
-      <div className='socials-inner'>
-        {socials.map((item, index) => {
-          const { link, icon } = item;
-          return <a key={index} href={link} target="_blank" rel="noreferrer">{icon}</a>
-        })}
-      </div>
-    </div>
-  )
-}
-
-const Content = ({ actualTab }) => {
-  return (
-    <div className='content'>
-      <AboutMe actualTab={actualTab} />
-      <Projects actualTab={actualTab} />
-      <Achievements actualTab={actualTab} />
-    </div>
-  )
 }
 
 export default App;

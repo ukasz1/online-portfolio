@@ -1,5 +1,4 @@
-import certificates from './certificates';
-import { FaAngleDoubleRight } from 'react-icons/fa'
+import certificates from '../data/certificates';
 
 const Achievements = ({ actualTab }) => {
   return (
