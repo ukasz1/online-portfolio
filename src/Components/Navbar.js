@@ -26,7 +26,7 @@ const ToggleNav = ({ checkTab, showNavList, setShowNavList }) => {
   return (
     <div className='toggle-nav'>
       <UpperNav avatar={avatar} showNavList={showNavList} setShowNavList={setShowNavList} />
-      <LinksContainer showNavList={showNavList} setShowNavList={setShowNavList} />
+      <LinksContainer checkTab={checkTab} showNavList={showNavList} setShowNavList={setShowNavList} />
     </div>
   )
 }

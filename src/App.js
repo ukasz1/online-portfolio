@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Avatar, Navbar, Container } from './Components/index';
 
 function App() {
-  const [actualTab, setActualTab] = useState(1);
+  const [actualTab, setActualTab] = useState(0);
   const [showNavList, setShowNavList] = useState(false);
 
   const checkTab = (e) => {
