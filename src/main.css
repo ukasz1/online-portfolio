@@ -229,7 +229,6 @@ td a:hover{
     border-top-left-radius: 0;
     box-shadow: none;
     border-left: 35px solid #001b47;
-    height: 1400px;
   }
   h1{
     padding-left: 13px;
@@ -319,58 +318,78 @@ td a:hover{
   }
 }
 /*---------------------------------------------------------------*/
-@media screen and (max-width: 992px){
-  main{
-    margin-left:3%;
-    width: 97%;
-    border-left: 35px solid #001b47;
-  }
-  h1{
-
-  }
-  
-}
-/*---------------------------------------------------------------*/
 @media screen and (max-width: 768px){
+  body{
+    overflow: hidden;
+  }
   main{
-    margin-left:3%;
-    width: 97%;
-    border-left: 35px solid #001b47;
+    overflow-y: scroll;
   }
   h1{
-
+    padding: 3px;
+    font-size: 4em;
   }
 
-
-
+  .about-article{
+    padding-left: 10px;
+  }
   .project-container{
-  padding: 20px;
-  column-gap: 30px;
-  grid-template-columns: auto auto;
+    width: 100%;
+    padding: 20px 22px 10px 22px;
+    column-gap: 22px;
+    row-gap: 22px;
+    grid-template-columns: auto auto;
   }
-
   .projects-item{
-    height: 21vh;
-  }
+  height: 180px;
 }
-/*---------------------------------------------------------------*/
-@media screen and (max-width: 576px){
-  main{
-    margin-left:2%;
-    width: 98%;
-    border-left: 35px solid #001b47;
-  }
-  h1{
-    font-size: 2.5em;
-  }
 
   .certificates-container{
   padding: 0;
+  padding-top: 20px;
 }
   td{
-    line-height: 1.2;
-    /* border: 1px solid green; */
+    line-height: 1.4;
     padding: 10px;
+    padding-left: 3px;
     border-bottom: #444444 1px dotted;
+  }
+}
+/*---------------------------------------------------------------*/
+@media screen and (max-width: 499px){
+  body{
+    overflow: visible;
+  }
+
+  h1{
+    padding: 5px;
+    font-size: 3.35em;
+  }
+  .project-container{
+    grid-template-columns: auto;
+    width: 82vw;
+    padding: 0;
+    padding-top: 30px;
+  }
+  .projects-item{
+    width: 95%; /*78vw*/
+    height: auto;
+  }
+  .card-picture{
+    width: 100%;
+  }
+  td{
+    line-height: 1.2;
+    padding: 10px;
+    padding-left: 3px;
+    border-bottom: #444444 1px dotted;
+  }
+  .underline{
+    left: 5px;
+    width: 80vw;
+  }
+
+  .small-avatar{
+    display: none;
   }
 }
