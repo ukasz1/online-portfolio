@@ -1,6 +1,6 @@
 import AboutMe from './AboutMe';
 import Projects from './Projects';
-import Achievements from './Achievements';
+import { Achievements } from './Achievements';
 import socials from '../data/socials'
 
 const Container = ({ actualTab }) => {

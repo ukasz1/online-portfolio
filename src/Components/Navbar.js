@@ -10,6 +10,7 @@ const Navbar = ({ checkTab, showNavList, setShowNavList }) => {
     </nav >
   )
 }
+
 const BasicNav = ({ checkTab }) => {
   return (
     <ul className='basic-nav'>
@@ -24,32 +25,43 @@ const BasicNav = ({ checkTab }) => {
 const ToggleNav = ({ checkTab, showNavList, setShowNavList }) => {
   return (
     <div className='toggle-nav'>
-      <div className='upper-nav'>
-        <div className='little-avatar-div'>
-          <span className='nav-span'>ŁUKASZ MITKOWSKI'S PORTFOLIO</span>
-          <img src={avatar} alt="logo" className='small-avatar' />
-        </div>
-        <div className='nav-button'>
-          <button className='toggle-button' onClick={() => setShowNavList(!showNavList)}>
-            <FaBars className='fa-bars' />
-          </button>
-        </div>
-      </div>
+      <UpperNav avatar={avatar} showNavList={showNavList} setShowNavList={setShowNavList} />
+      <LinksContainer showNavList={showNavList} setShowNavList={setShowNavList} />
+    </div>
+  )
+}
 
-      <div className={`links-container ${showNavList && 'show-links-container'}`}>
-        <ul className='links'>
-          {navList.map((link, index) => {
-            const { id, text } = link;
-            return (
-              <li key={id}><span
-                className="links-btn"
-                id={'_' + index}
-                onClick={(e) => { checkTab(e); setShowNavList(!showNavList) }}
-              >{text}</span></li>
-            )
-          })}
-        </ul>
+const UpperNav = ({ avatar, showNavList, setShowNavList }) => {
+  return (
+    <div className='upper-nav'>
+      <div className='little-avatar-div'>
+        <span className='nav-span'>ŁUKASZ MITKOWSKI'S PORTFOLIO</span>
+        <img src={avatar} alt="logo" className='small-avatar' />
       </div>
+      <div className='nav-button'>
+        <button className='toggle-button' onClick={() => setShowNavList(!showNavList)}>
+          <FaBars className='fa-bars' />
+        </button>
+      </div>
+    </div>
+  )
+}
+
+const LinksContainer = ({ checkTab, showNavList, setShowNavList }) => {
+  return (
+    <div className={`links-container ${showNavList && 'show-links-container'}`}>
+      <ul className='links'>
+        {navList.map((link, index) => {
+          const { id, text } = link;
+          return (
+            <li key={id}><span
+              className="links-btn"
+              id={'_' + index}
+              onClick={(e) => { checkTab(e); setShowNavList(!showNavList) }}
+            >{text}</span></li>
+          )
+        })}
+      </ul>
     </div>
   )
 }
