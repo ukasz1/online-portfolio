@@ -8,6 +8,10 @@ This is my portfolio (see 👉[online version](https://mitkowski-portfolio.netli
 
 This is my web portfolio. It tells a few words about me, shows my best projects and gives an information about certificates I have.
 
+## Used Technologies
+- React
+- HTML/CSS
+
 ## Goals
 
 My goal during this project was:
