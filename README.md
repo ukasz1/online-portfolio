@@ -1,8 +1,12 @@
 # Porfolio
 
-This is my web portfolio. The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). See [online here](https://mitkowski-portfolio.netlify.app/).
+This is my portfolio (see 👉[online version](https://mitkowski-portfolio.netlify.app/)👈) . The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <img src="https://github.com/ukasz1/essentials/blob/main/portfolio/view.png?raw=true" />
+
+## Description
+
+This is my web portfolio. It tells a few words about me, shows my best projects and gives an information about certificates I have.
 
 ## Goals
 
@@ -16,7 +20,7 @@ My goal during this project was:
 
 ## Available Scripts
 
-In the project directory, you can run:
+After cloning, in the project directory you can run:
 
 ### `npm start`
 
