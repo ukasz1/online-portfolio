@@ -9,19 +9,19 @@ const projects = [
   {
     id: 1,
     src: card1,
-    link: 'https://mitkowski-chochliki.netlify.app',
+    link: 'https://mitkowski-portfolio.netlify.app',
     desciption: ''
   },
   {
     id: 2,
     src: card2,
-    link: '',
+    link: 'https://mitkowski-chochliki.netlify.app',
     desciption: ''
   },
   {
     id: 3,
     src: card3,
-    link: '',
+    link: 'https://mitkowski-healthmedic.netlify.app',
     desciption: ''
   },
   {
