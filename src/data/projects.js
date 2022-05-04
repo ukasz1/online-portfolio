@@ -27,7 +27,7 @@ const projects = [
   {
     id: 4,
     src: card4,
-    link: '',
+    link: 'https://todo-awesome-list.netlify.app',
     desciption: ''
   },
   {
