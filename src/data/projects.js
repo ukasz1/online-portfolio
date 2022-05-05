@@ -14,8 +14,8 @@ const projects = [
   },
   {
     id: 2,
-    src: card2,
-    link: 'https://mitkowski-chochliki.netlify.app',
+    src: card4,
+    link: 'https://todo-awesome-list.netlify.app',
     desciption: ''
   },
   {
@@ -26,8 +26,8 @@ const projects = [
   },
   {
     id: 4,
-    src: card4,
-    link: 'https://todo-awesome-list.netlify.app',
+    src: card2,
+    link: 'https://mitkowski-chochliki.netlify.app',
     desciption: ''
   },
   {
