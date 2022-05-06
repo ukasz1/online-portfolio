@@ -22,13 +22,5 @@ My goal during this project was:
 - testing more advanced CSS styles
 - creating my web portfolio
 
-## Available Scripts
-
-After cloning, in the project directory you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.
+## Project run
+To run the project please clone this repository, open it, then open your command line and go with <code>npm install</code> and <code>npm start</code> at the end. The project should run in the browser on <i>localhost:3000</i>.
