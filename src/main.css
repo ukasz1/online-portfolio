@@ -221,6 +221,10 @@ td a:hover{
   transform: translateX(0);
   z-index: 1;
 }
+.stressed {
+  font-weight: bold;
+  font-style: italic;
+}
 
 @media screen and (max-width: 1050px){
   main{
