@@ -7,7 +7,7 @@ const AboutMe = ({ actualTab }) => {
         <div className="underline underline-about"></div>
       </div>
       <article className="about-article">
-        <p>My name is Łukasz Mitkowski, and I am a web designer with a technical and economic education. <span className="stressed">Currently I work in Samsung R&D Institute Poland.</span></p><br />
+        <p>My name is Łukasz Mitkowski, and I am a web designer with a technical and economic education. <span className="stressed">I am currently working at Samsung R&D Institute Poland.</span></p><br />
         <p>I am interested in front-end development - React, JS, HTML and all that goes with it. Exploring Javascript is very interesting and exciting for me. I find that language very powerful. I like to know, how the world around me works, so I am also interested in back-end: Node, MongoDB. In the future I would like to be a full-stack developer.
         </p><br />
         <p>For last months I intensively expand my knowledge and create my own projects. In my opinion, there is no other way to be a good developer. I have also done some courses and small projects under the guidance of John Smilga on Udemy that I found extremely useful for my studying. However, making own projects is the most important for me.</p><br />
